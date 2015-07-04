@@ -1,0 +1,26 @@
+{
+  "name": "angular-ie8",
+  "version": "0.0.1",
+  "homepage": "https://github.com/gvnn/angular-ie8",
+  "authors": [
+    "Giovanni Ferron <gvnnrulez@gmail.com>"
+  ],
+  "description": "ie8 angular test",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.5",
+    "angular": "angularjs-ie8-build#~1.4.0",
+    "jquery": "~1.11.3",
+    "angular-bootstrap": "~0.13.0"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "angular-ie8",
+  "version": "0.0.1",
+  "description": "ie8 angular test",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gvnn/angular-ie8.git"
+  },
+  "author": "Giovanni Ferron <gvnnrulez@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gvnn/angular-ie8/issues"
+  },
+  "homepage": "https://github.com/gvnn/angular-ie8#readme",
+  "dependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-sass": "^2.0.3",
+    "gulp-util": "^3.0.6",
+    "jshint-stylish": "^2.0.1",
+    "wrench": "^1.5.8"
+  }
+}
