@@ -16,36 +16,43 @@ exports.config = {
 
   multiCapabilities: [
     {
-      browserName:         'chrome',
-      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'browserName': 'chrome',
+      'name': 'protractor - chrome',
+      'build':               process.env.TRAVIS_BUILD_NUMBER,
       'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
     }, {
-      browserName:         'firefox',
-      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'browserName':         'firefox',
+      'name': 'protractor - firefox',
+      'build':               process.env.TRAVIS_BUILD_NUMBER,
       'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
     }, {
-      browserName:         'safari',
-      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'browserName':         'safari',
+      'name': 'protractor - safari',
+      'build':               process.env.TRAVIS_BUILD_NUMBER,
       'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
     }, {
-      browserName:         'internet explorer',
-      version:             11,
-      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'browserName':         'internet explorer',
+      'name': 'protractor - ie11',
+      'version':             11,
+      'build':               process.env.TRAVIS_BUILD_NUMBER,
       'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
     }, {
-      browserName:         'internet explorer',
-      version:             10,
-      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'browserName':         'internet explorer',
+      'name': 'protractor - ie10',
+      'version':             10,
+      'build':               process.env.TRAVIS_BUILD_NUMBER,
       'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
     }, {
-      browserName:         'internet explorer',
-      version:             9,
-      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'browserName':         'internet explorer',
+      'name': 'protractor - ie9',
+      'version':             9,
+      'build':               process.env.TRAVIS_BUILD_NUMBER,
       'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
     }, {
-      browserName:         'internet explorer',
-      version:             8,
-      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'browserName':         'internet explorer',
+      'name': 'protractor - ie8',
+      'version':             8,
+      'build':               process.env.TRAVIS_BUILD_NUMBER,
       'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
     }
   ]
