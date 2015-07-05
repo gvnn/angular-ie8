@@ -11,7 +11,8 @@ var stylish = require('gulp-jscs-stylish');
 gulp.task('lint', function() {
   return gulp.src([
       path.join(conf.paths.src, '/**/*.js'),
-      path.join(conf.paths.gulp, '/**/*.js')
+      path.join(conf.paths.gulp, '/**/*.js'),
+      path.join(conf.paths.e2e, '/**/*.js')
     ])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))

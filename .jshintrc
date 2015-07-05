@@ -99,6 +99,9 @@
         "__dirname": false,
         "process": false,
         "exports": false,
-        "inject": false
+        "inject": false,
+        "browser": false,
+        "element": false,
+        "by": false
     }        // additional predefined global variables
 }
