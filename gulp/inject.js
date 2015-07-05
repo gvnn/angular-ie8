@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var conf = require('./conf');
 var wiredep = require('wiredep').stream;
 var angularFilesort = require('gulp-angular-filesort');
-var inject = require('gulp-inject');
+var gulpInject = require('gulp-inject');
 
 gulp.task('inject', ['scripts', 'styles'], function() {
 
@@ -25,8 +25,8 @@ gulp.task('inject', ['scripts', 'styles'], function() {
   };
 
   return gulp.src(path.join(conf.paths.src, '/*.html'))
-    .pipe(inject(injectStyles, injectOptions))
-    .pipe(inject(injectScripts, injectOptions))
+    .pipe(gulpInject(injectStyles, injectOptions))
+    .pipe(gulpInject(injectScripts, injectOptions))
     .pipe(wiredep(conf.wiredep))
     .pipe(gulp.dest(path.join(conf.paths.tmp, '/serve')));
 

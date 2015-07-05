@@ -92,6 +92,13 @@
     "globals"       : {
         "require": false,
         "exports": false,
-        "angular": false
+        "angular": false,
+        "module": false,
+        "expect": false,
+        "console": false,
+        "__dirname": false,
+        "process": false,
+        "exports": false,
+        "inject": false
     }        // additional predefined global variables
 }
