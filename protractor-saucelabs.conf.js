@@ -1,19 +1,42 @@
-'use strict';
+exports.config = {
 
-var config = require('./protractor.common.js').config;
+  sauceUser: process.env.SAUCE_USERNAME,
+  sauceKey: process.env.SAUCE_ACCESS_KEY,
 
-var testName = 'Protractor tests';
+  multiCapabilities: [
+    {
+      browserName:         'chrome',
+      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
+    }, {
+      browserName:         'firefox',
+      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
+    }, {
+      browserName:         'safari',
+      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
+    }, {
+      browserName:         'internet explorer',
+      version:             11,
+      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
+    }, {
+      browserName:         'internet explorer',
+      version:             10,
+      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
+    }, {
+      browserName:         'internet explorer',
+      version:             9,
+      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
+    }, {
+      browserName:         'internet explorer',
+      version:             8,
+      build:               process.env.TRAVIS_BUILD_NUMBER,
+      'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
+    }
+  ]
 
-config.sauceUser = process.env.SAUCE_USERNAME;
-
-config.sauceKey = process.env.SAUCE_ACCESS_KEY;
-
-config.multiCapabilities = [{
-  'browserName': 'firefox',
-  'name': testName,
-  'tunnel-identifier': (process.env.TRAVIS) ? process.env.TRAVIS_JOB_NUMBER : process.env.TUNNEL_ID,
-  'build': process.env.TRAVIS_BUILD_NUMBER
-}
-];
-
-exports.config = config;
+};
