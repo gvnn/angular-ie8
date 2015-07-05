@@ -1,4 +1,25 @@
 language: node_js
+
 node_js:
 - '0.11'
 - '0.10'
+
+before_install:
+  - npm install
+
+before_script:
+  - npm install -g bower
+  - bower install
+
+env:
+  global:
+  - secure: N/tGUe6QJM6duP9k3fVbX9AjiHfzBXRLQKtGeH0EiXelcooh3OifzokjXBFY498dnKrtLR6mRKaAoIGowsrk9kCCSAP/kd4pI9oEIbKLAOz78w4xSfET5Ub2s/iOvnUTfzs89MNOijUipN5MuHqcnGiimjgYNWQpVY/wtzDB+94BrqA613RuX1vGVRVzCW19m/Nx1eaNhm5YV/l7JkQGH3DH0a+S0fH+d2ZvqnY5IZmkb80nK/v5wF/aOBGRcOW24LdLTogsrMVmXW/ldDvG1UgQY6hAjyDmz2sxOAIDp33CQ6bE54rEAvjBe4BziIkH+NfjgbQjGqTeCdlxBFc9LOkJqbGkDXvOq9n1FMKX+I3gT4weQvOEXzuv25r+Vo4yhKIwP5iXgjkrE/r0PNpb94lANQOk1jOvXMp8f8axI2dVEswmcgIhTkQNvidZbrguOTK4eyXOSc9D9G6+pcAgDSfvcW5+S3oce54M8iTERGgtFXrNfnLPdgz8cXcqxXtHxw6iHTTTRL21U6cOQ8SSIc4Gv5JEqKZyVWwpWFSIy5uc3kpVXbv5hUgxTKrnPKOvHMIxZD+4kef9+IEgErko7xQ+zxZX8oMl4+9t1kLgsojvXyuln0vZPwyl4N0FJH23/8lbX4MX1mqByzEaruszSt+x/nB+bzSogz6swVtGiAE=
+  - secure: PJwBi0SElOwa1g+rVXDZwHEegxzElZ1SYGoY6trSqhH8D4YjfqKGYmW0HDkP1bn+k8vviAKF4N7pTtKou6SboZwGKLo/3BaHATGaIzj4LA1vKoaoi5tyihYnR2mUteybuSIjFO54j7VTsahHuAjjwsEoCUQuXenwTIV8w0na2F1WK1QBOfGpVgnEZmpAsQsw2EUS1oP5bnU0vHbsNxqaf7QKjPvHhvG9k0grv8XmqvlNmBr3vuHOCUhD80WDqhiW9uv9dgOrcOMchhBAtbRVjUDf4Ln63hFVnEzHcp2AiCW7iAOj057UMZsxwz225CCCNwwKw0euaWZntFNhGiK0nR48bxPK9Ed61IZcXfSi3Bi37aILMJ7pZNZf7/yAQY2lg7ElMmyhjLf6HgYD2S0dQEuqW+vbmqQXjaWchutNl6KwvOxX8oailGxzXZopPpP7CznQwRtMWc/JIXwH7B9EEOwt1xQT2krzHTBvXnTUlW91a5kbGZoUNVkmFrRFIP/Mq7E1Bcm6PmpBO9H8dpldwsnAOeuL6NvU1uzgtw7gubjUKWaEcrETIgPu7ne4UoyzESSpszq2RbtNhrTWaa/KipET9VqJM80WNBPOYpoFlK4i/tXekggGi3hCc03exi3SZb2OrxJte39L8Pw+z4Ska8Mr8BiZkKkpKFORbBxw0gg=
+  - NODE_ENV=travis
+
+addons:
+  sauce_connect: true
+
+cache:
+  directories:
+    - node_modules
