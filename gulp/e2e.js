@@ -37,3 +37,4 @@ gulp.task('webdriver-update', protractor.webdriver_update);
 gulp.task('webdriver-standalone', protractor.webdriver_standalone);
 
 gulp.task('protractor:src', ['serve:e2e', 'webdriver-update'], runProtractor);
+gulp.task('protractor:dist', ['serve:e2e-dist', 'webdriver-update'], runProtractor);
