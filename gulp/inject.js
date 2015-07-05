@@ -1,15 +1,15 @@
-var path = require('path'),
-  gulp = require('gulp'),
-  conf = require('./conf'),
-  wiredep = require('wiredep').stream,
-  angularFilesort = require('gulp-angular-filesort'),
-  inject = require('gulp-inject');
+var path = require('path');
+var gulp = require('gulp');
+var conf = require('./conf');
+var wiredep = require('wiredep').stream;
+var angularFilesort = require('gulp-angular-filesort');
+var inject = require('gulp-inject');
 
-gulp.task('inject', ['scripts', 'styles'], function () {
+gulp.task('inject', ['scripts', 'styles'], function() {
 
   var injectStyles = gulp.src([
     path.join(conf.paths.tmp, '/serve/app/**/*.css')
-  ], { read: false });
+  ], {read: false});
 
   var injectScripts = gulp.src([
     path.join(conf.paths.src, '/app/**/*.module.js'),
