@@ -11,9 +11,9 @@ describe('The main view', function () {
   });
 
   it('should change h1 text', function() {
-    page.messageInputText.clear();
-    page.messageInputText.sendKeys('ie8');
-    expect(page.headerMessage.getText()).toBe('Hello ie8');
+    page.messageInputText.clear().sendKeys('ie8').then(function() {
+      expect(page.headerMessage.getText()).toBe('Hello ie8');
+    });
   });
 
 });
