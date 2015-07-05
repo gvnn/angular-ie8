@@ -1,7 +1,18 @@
+var conf = require('./gulp/conf');
+
 exports.config = {
 
   sauceUser: process.env.SAUCE_USERNAME,
   sauceKey: process.env.SAUCE_ACCESS_KEY,
+
+  baseUrl: 'http://localhost:' + (process.env.HTTP_PORT || '3000'),
+
+  specs: [conf.paths.e2e + '/**/*.js'],
+
+  jasmineNodeOpts: {
+    showColors: true,
+    defaultTimeoutInterval: 30000
+  }
 
   multiCapabilities: [
     {
