@@ -5,6 +5,8 @@ var jshint = require('gulp-jshint');
 var size = require('gulp-size');
 var jscs = require('gulp-jscs');
 var browserSync = require('browser-sync');
+var noop = function () {};
+var stylish = require('gulp-jscs-stylish');
 
 gulp.task('lint', function() {
   return gulp.src([
@@ -13,7 +15,11 @@ gulp.task('lint', function() {
     ])
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jscs());
+    .pipe(jscs({
+        fix: true
+    }))
+    .on('error', noop) // don't stop on error
+    .pipe(stylish());  // log style errors
 });
 
 gulp.task('scripts', function() {
@@ -21,6 +27,8 @@ gulp.task('scripts', function() {
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(jscs())
+    .on('error', noop) // don't stop on error
+    .pipe(stylish())  // log style errors
     .pipe(browserSync.reload({stream: true}))
     .pipe(size());
 });
